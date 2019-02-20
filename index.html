@@ -1,0 +1,393 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>phild - designer &amp; developer</title>
+
+<style contenteditable="true">/* Hey! There's not much to explain. Edit the css styles & create the look you want.
+Change colors, font sizes or edit the animation values directly live ... whatever!
+FYI this website was coded very late in the night with the help of Sublime Text.
+Great text editor! You should definitely give it a try -> https://www.sublimetext.com
+
+If you want to get in touch with me, scroll down to the footer and pick your choice.
+
+
+     _/\/\/\/\/\____/\/\____/\/\__/\/\/\/\__/\/\________/\/\/\/\/\___
+    _/\/\____/\/\__/\/\____/\/\____/\/\____/\/\________/\/\____/\/\_ 
+   _/\/\/\/\/\____/\/\/\/\/\/\____/\/\____/\/\________/\/\____/\/\_  
+  _/\/\__________/\/\____/\/\____/\/\____/\/\________/\/\____/\/\_   
+ _/\/\__________/\/\____/\/\__/\/\/\/\__/\/\/\/\/\__/\/\/\/\/\___    
+________________________________________________________________     
+
+(No need for any fancy graphics - Ascii does the job aswell) */
+
+
+@import url("https://fonts.googleapis.com/css?family=Oxygen+Mono%7CRubik");
+
+html {
+  color: #fefefe;
+  background-size: 20px 20px;
+  background-position: 0 0, 10px 10px;
+  background-image: linear-gradient(45deg, #cccccc 25%, transparent 25%, transparent 75%, #cccccc 75%, #cccccc), 
+                    linear-gradient(45deg, #cccccc 25%, transparent 25%, transparent 75%, #cccccc 75%, #cccccc);
+/* background-color: #263238; */
+  white-space:nowrap;
+  border-right: 3px solid #c2fb00;
+  -webkit-animation: slideIn 4s steps(500, end);
+  -o-animation: slideIn 4s steps(500, end);
+  -moz-animation: slideIn 4s steps(500, end);
+  animation: slideIn 4s steps(500, end);
+}
+@-webkit-keyframes slideIn {
+   from { width: 0; }
+   to { width:100%; }
+}
+@-o-keyframes slideIn {
+   from { width: 0; }
+   to { width:100%; }
+}
+@-moz-keyframes slideIn {
+   from { width: 0; }
+   to { width:100%; }
+}
+@keyframes slideIn {
+   from { width: 0; }
+   to { width:100%; }
+}
+
+head {
+  display: block;
+  overflow-x: hidden;
+}
+
+head style {
+  display: block;
+  padding: 30px 60px;
+  white-space: pre-wrap;
+  letter-spacing: .02em;
+  font: 15px/1.2 'Oxygen Mono', monospace;
+  background: linear-gradient(270deg, #cb1341, #c864a1, #1182c9, #0fc6c9, #73c656, #cdb122, #cb1341);
+  background-size: 2000% 2000%; 
+  -webkit-animation: colorChange 90s ease infinite;
+  -o-animation: colorChange 90s ease infinite;  
+  -moz-animation: colorChange 90s ease infinite;
+  animation: colorChange 90s ease infinite;
+}
+@-webkit-keyframes colorChange {
+    0%{background-position:100% 0%}
+    50%{background-position:0% 100%}
+    100%{background-position:100% 0%}
+}
+@-o-keyframes colorChange {
+    0%{background-position:100% 0%}
+    50%{background-position:0% 100%}
+    100%{background-position:100% 0%}
+}
+@-moz-keyframes colorChange {
+    0%{background-position:100% 0%}
+    50%{background-position:0% 100%}
+    100%{background-position:100% 0%}
+}
+@keyframes colorChange { 
+    0%{background-position:100% 0%}
+    50%{background-position:0% 100%}
+    100%{background-position:100% 0%}
+}
+
+head::before {
+  content: '- designer & developer';
+  display: block;
+  padding: 30px 200px;
+  font: 40px/1.2 'Rubik', sans-serif;
+  border-bottom: 3px solid rgba(194, 251, 0, 1);
+  background-size: 170px;  
+  background-color: #263238; /*#212121;*/ /*#1a1a1a;*/
+  background-repeat: no-repeat;
+  background-position: 15px 20px;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI4MjJweCIgaGVpZ2h0PSIyNzZweCIgdmlld0JveD0iMCAwIDgyMiAyNzYiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+ICAgICAgICA8dGl0bGU+bG9nb3R5cGU8L3RpdGxlPiAgICA8ZGVzYz5DcmVhdGVkIHdpdGggU2tldGNoLjwvZGVzYz4gICAgPGRlZnM+PC9kZWZzPiAgICA8ZyBpZD0iUGFnZS0xIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIj4gICAgICAgIDxnIGlkPSJsb2dvdHlwZSIgZmlsbD0iI0ZFRkVGRSI+ICAgICAgICAgICAgPHBhdGggZD0iTTQyNy45MzE4LDE0MS44NDg0IEM0MjIuNTQ2OCwxMzUuOTc4NCA0MTUuMzIwOCwxMzMuMDQzNCA0MDYuMjcyOCwxMzMuMDQzNCBDMzk4LjMyOTgsMTMzLjA0MzQgMzkxLjc2MjgsMTM1LjM4NzQgMzg2LjUxMTgsMTQwLjA2NjQgQzM4MS4yODE4LDE0NC43NDU0IDM3OC4yNTk4LDE1MS4yOTM0IDM3Ny40NjQ4LDE1OS43MDE0IEMzNzcuMzA5OCwxNjEuMjg5NCAzNzcuMjMyOCwxNjQuMzExNCAzNzcuMjMyOCwxNjguNzQ4NCBDMzc3LjIzMjgsMTczLjE5NDQgMzc3LjMwOTgsMTc2LjIxNjQgMzc3LjQ2NDgsMTc3Ljc5NDQgQzM3OC4yNTk4LDE4NS44OTQ0IDM4MS4zMTk4LDE5Mi4zNTQ0IDM4Ni42MjY4LDE5Ny4xOTc0IEMzOTEuOTU1OCwyMDIuMDQxNCAzOTguNTAzOCwyMDQuNDYzNCA0MDYuMjcyOCwyMDQuNDYzNCBDNDE0LjM3MDgsMjA0LjQ2MzQgNDIxLjAzNDgsMjAyLjA3OTQgNDI2LjI2NTgsMTk3LjMxNDQgQzQzMS41MTQ4LDE5Mi41NTg0IDQzNC41OTY4LDE4NS4yNTQ0IDQzNS41NjU4LDE3NS40MTI0IEM0MzUuODc0OCwxNzIuMjQ1NCA0MzYuMDI5OCwxNzAuMDI3NCA0MzYuMDI5OCwxNjguNzQ4NCBDNDM2LjAyOTgsMTU2LjY4ODQgNDMzLjMzNjgsMTQ3LjcxODQgNDI3LjkzMTgsMTQxLjg0ODQgWiBNMzc3LjQ2NDgsMjY5LjQ1MDQgQzM3Ny40NjQ4LDI3MS4xOTQ0IDM3Ni44MjU4LDI3Mi43MDQ0IDM3NS41NjU4LDI3My45NzM0IEMzNzQuMjg3OCwyNzUuMjQyNCAzNzIuNzk2OCwyNzUuODcyNCAzNzEuMDUyOCwyNzUuODcyNCBMMzUyLjk1NzgsMjc1Ljg3MjQgQzM1MS4xOTM4LDI3NS44NzI0IDM0OS43MDI4LDI3NS4yNDI0IDM0OC40MjQ4LDI3My45NzM0IEMzNDcuMTY0OCwyNzIuNzA0NCAzNDYuNTI1OCwyNzEuMTk0NCAzNDYuNTI1OCwyNjkuNDUwNCBMMzQ2LjUyNTgsMTEzLjI4MjQgQzM0Ni41MjU4LDExMS41Mzk0IDM0Ny4xNjQ4LDExMC4wMjg0IDM0OC40MjQ4LDEwOC43NTk0IEMzNDkuNzAyOCwxMDcuNDkwNCAzNTEuMTkzOCwxMDYuODUwNCAzNTIuOTU3OCwxMDYuODUwNCBMMzcxLjA1MjgsMTA2Ljg1MDQgQzM3Mi43OTY4LDEwNi44NTA0IDM3NC4yODc4LDEwNy40OTA0IDM3NS41NjU4LDEwOC43NTk0IEMzNzYuODI1OCwxMTAuMDI4NCAzNzcuNDY0OCwxMTEuNTM5NCAzNzcuNDY0OCwxMTMuMjgyNCBMMzc3LjQ2NDgsMTE4Ljc1NTQgQzM4MC43OTc4LDExNC45NDg0IDM4NS40MDc4LDExMS42MTY0IDM5MS4yNzc4LDEwOC43NTk0IEMzOTcuMTQ2OCwxMDUuOTAyNCA0MDQuNTI4OCwxMDQuNDc3NCA0MTMuNDIxOCwxMDQuNDc3NCBDNDIzLjcyODgsMTA0LjQ3NzQgNDMyLjgxMzgsMTA3LjA1NTQgNDQwLjY3OTgsMTEyLjIwNzQgQzQ0OC41MjU4LDExNy4zNzA0IDQ1NC42ODY4LDEyNC4xOTk0IDQ1OS4xMjM4LDEzMi42ODU0IEM0NjMuNTU5OCwxNDEuMTgwNCA0NjYuMDIwOCwxNTAuNDIxNCA0NjYuNTA0OCwxNjAuNDE3NCBDNDY2LjY1OTgsMTYyLjAwNjQgNDY2LjczNjgsMTY0Ljc4NjQgNDY2LjczNjgsMTY4Ljc0ODQgQzQ2Ni43MzY4LDE3Mi43MjA0IDQ2Ni42NTk4LDE3NS41MDA0IDQ2Ni41MDQ4LDE3Ny4wNzg0IEM0NjYuMDIwOCwxODcuMDg1NCA0NjMuNTU5OCwxOTYuMzI1NCA0NTkuMTIzOCwyMDQuODIyNCBDNDU0LjY4NjgsMjEzLjMwNzQgNDQ4LjUyNTgsMjIwLjEzNTQgNDQwLjY3OTgsMjI1LjI4ODQgQzQzMi44MTM4LDIzMC40NTI0IDQyMy43Mjg4LDIzMy4wMjk0IDQxMy40MjE4LDIzMy4wMjk0IEM0MDQuNjg0OCwyMzMuMDI5NCAzOTcuMzgwOCwyMzEuNTk1NCAzOTEuNTEwOCwyMjguNzM4NCBDMzg1LjYzOTgsMjI1Ljg4MDQgMzgwLjk1MjgsMjIyLjU0NzQgMzc3LjQ2NDgsMjE4Ljc0MjQgTDM3Ny40NjQ4LDI2OS40NTA0IFoiIGlkPSJGaWxsLTEiPjwvcGF0aD4gICAgICAgICAgICA8cGF0aCBkPSJNNTk0LjUzMiwyMjguNzM3NyBDNTkzLjI1NCwyMzAuMDE2NyA1OTEuNzYzLDIzMC42NDQ3IDU5MC4wMTksMjMwLjY0NDcgTDU3MS45MjQsMjMwLjY0NDcgQzU3MC4xOCwyMzAuNjQ0NyA1NjguNjY5LDIzMC4wMTY3IDU2Ny4zOTEsMjI4LjczNzcgQzU2Ni4xMzEsMjI3LjQ2ODcgNTY1LjQ5MSwyMjUuOTY2NyA1NjUuNDkxLDIyNC4yMTQ3IEw1NjUuNDkxLDE2My43NDk3IEM1NjUuNDkxLDE1My45MDg3IDU2My4xODYsMTQ2LjIxNzcgNTU4LjU5NCwxNDAuNjU3NyBDNTUzLjk4NCwxMzUuMTA2NyA1NDcuMjQyLDEzMi4zMjY3IDUzOC4zNSwxMzIuMzI2NyBDNTMwLjA5NiwxMzIuMzI2NyA1MjMuNTEsMTM1LjE4NDcgNTE4LjU5LDE0MC44OTg3IEM1MTMuNjY4LDE0Ni42MTM3IDUxMS4yMDgsMTU0LjIyNzcgNTExLjIwOCwxNjMuNzQ5NyBMNTExLjIwOCwyMjQuMjE0NyBDNTExLjIwOCwyMjUuOTY2NyA1MTAuNTY4LDIyNy40Njg3IDUwOS4zMDksMjI4LjczNzcgQzUwOC4wMywyMzAuMDE2NyA1MDYuNTM5LDIzMC42NDQ3IDUwNC43OTUsMjMwLjY0NDcgTDQ4Ni43LDIzMC42NDQ3IEM0ODQuOTM5LDIzMC42NDQ3IDQ4My40NDYsMjMwLjAxNjcgNDgyLjE2NywyMjguNzM3NyBDNDgwLjkwOCwyMjcuNDY4NyA0ODAuMjY5LDIyNS45NjY3IDQ4MC4yNjksMjI0LjIxNDcgTDQ4MC4yNjksNjguMDU1NyBDNDgwLjI2OSw2Ni4zMDI3IDQ4MC45MDgsNjQuODAwNyA0ODIuMTY3LDYzLjUzMTcgQzQ4My40NDYsNjIuMjYyNyA0ODQuOTM5LDYxLjYyMzcgNDg2LjcsNjEuNjIzNyBMNTA0Ljc5NSw2MS42MjM3IEM1MDYuNTM5LDYxLjYyMzcgNTA4LjAzLDYyLjI2MjcgNTA5LjMwOSw2My41MzE3IEM1MTAuNTY4LDY0LjgwMDcgNTExLjIwOCw2Ni4zMDI3IDUxMS4yMDgsNjguMDU1NyBMNTExLjIwOCwxMTguNzU2NyBDNTIwLjczOSwxMDkuMjMzNyA1MzIuMTY5LDEwNC40Nzc3IDU0NS40OTgsMTA0LjQ3NzcgQzU2My40MTksMTA0LjQ3NzcgNTc2LjM5OSwxMDkuNjMwNyA1ODQuNDE5LDExOS45NDY3IEM1OTIuNDIxLDEzMC4yNjI3IDU5Ni40MywxNDMuNjc5NyA1OTYuNDMsMTYwLjE4NTcgTDU5Ni40MywyMjQuMjE0NyBDNTk2LjQzLDIyNS45NjY3IDU5NS44MTEsMjI3LjQ2ODcgNTk0LjUzMiwyMjguNzM3NyIgaWQ9IkZpbGwtMyI+PC9wYXRoPiAgICAgICAgICAgIDxwYXRoIGQ9Ik02MTIuOTg1LDEwOC42NTk3IEM2MTQuMjY0LDEwNy4zODA3IDYxNS43NTYsMTA2Ljc1MTcgNjE3LjQ5OCwxMDYuNzUxNyBMNjM1LjU5NCwxMDYuNzUxNyBDNjM3LjM1NywxMDYuNzUxNyA2MzguODQ4LDEwNy4zODA3IDY0MC4xMjcsMTA4LjY1OTcgQzY0MS4zODYsMTA5LjkyODcgNjQyLjAyNiwxMTEuNDMwNyA2NDIuMDI2LDExMy4xODI3IEw2NDIuMDI2LDIyNC4xMTQ3IEM2NDIuMDI2LDIyNS44NTg3IDY0MS4zODYsMjI3LjM2OTcgNjQwLjEyNywyMjguNjM3NyBDNjM4Ljg0OCwyMjkuOTA2NyA2MzcuMzU3LDIzMC41NDU3IDYzNS41OTQsMjMwLjU0NTcgTDYxNy40OTgsMjMwLjU0NTcgQzYxNS43NTYsMjMwLjU0NTcgNjE0LjI2NCwyMjkuOTA2NyA2MTIuOTg1LDIyOC42Mzc3IEM2MTEuNzI2LDIyNy4zNjk3IDYxMS4wODYsMjI1Ljg1ODcgNjExLjA4NiwyMjQuMTE0NyBMNjExLjA4NiwxMTMuMTgyNyBDNjExLjA4NiwxMTEuNDMwNyA2MTEuNzI2LDEwOS45Mjg3IDYxMi45ODUsMTA4LjY1OTcgTTYxMS44MDQsMjczLjg2NTcgQzYxMC41MjUsMjcyLjU5NjcgNjA5Ljg4NSwyNzEuMDk0NyA2MDkuODg1LDI2OS4zNDI3IEw2MDkuODg1LDI1MC43NzI3IEM2MDkuODg1LDI0OS4wMjg3IDYxMC41MjUsMjQ3LjUxNzcgNjExLjgwNCwyNDYuMjU4NyBDNjEzLjA2MiwyNDQuOTc5NyA2MTQuNTczLDI0NC4zNDk3IDYxNi4zMTcsMjQ0LjM0OTcgTDYzNi43OTUsMjQ0LjM0OTcgQzYzOC41MzksMjQ0LjM0OTcgNjQwLjA1LDI0NC45Nzk3IDY0MS4zMDgsMjQ2LjI1ODcgQzY0Mi41ODksMjQ3LjUxNzcgNjQzLjIyNywyNDkuMDI4NyA2NDMuMjI3LDI1MC43NzI3IEw2NDMuMjI3LDI2OS4zNDI3IEM2NDMuMjI3LDI3MS4wOTQ3IDY0Mi41ODksMjcyLjU5NjcgNjQxLjMwOCwyNzMuODY1NyBDNjQwLjA1LDI3NS4xMzQ3IDYzOC41MzksMjc1Ljc3MjcgNjM2Ljc5NSwyNzUuNzcyNyBMNjE2LjMxNywyNzUuNzcyNyBDNjE0LjU3MywyNzUuNzcyNyA2MTMuMDYyLDI3NS4xMzQ3IDYxMS44MDQsMjczLjg2NTciIGlkPSJGaWxsLTUiPjwvcGF0aD4gICAgICAgICAgICA8cGF0aCBkPSJNNjg0Ljg5NTgsMjI4LjczNzcgQzY4My42MTY4LDIzMC4wMTY3IDY4Mi4xMjQ4LDIzMC42NDQ3IDY4MC4zODI4LDIzMC42NDQ3IEw2NjIuMjg2OCwyMzAuNjQ0NyBDNjYwLjUyMzgsMjMwLjY0NDcgNjU5LjAzMjgsMjMwLjAxNjcgNjU3Ljc1MzgsMjI4LjczNzcgQzY1Ni40OTQ4LDIyNy40Njg3IDY1NS44NTQ4LDIyNS45NjY3IDY1NS44NTQ4LDIyNC4yMTQ3IEw2NTUuODU0OCw2OC4wNTU3IEM2NTUuODU0OCw2Ni4zMDI3IDY1Ni40OTQ4LDY0LjgwMDcgNjU3Ljc1MzgsNjMuNTMxNyBDNjU5LjAzMjgsNjIuMjYyNyA2NjAuNTIzOCw2MS42MjM3IDY2Mi4yODY4LDYxLjYyMzcgTDY4MC4zODI4LDYxLjYyMzcgQzY4Mi4xMjQ4LDYxLjYyMzcgNjgzLjYxNjgsNjIuMjYyNyA2ODQuODk1OCw2My41MzE3IEM2ODYuMTU0OCw2NC44MDA3IDY4Ni43OTI4LDY2LjMwMjcgNjg2Ljc5MjgsNjguMDU1NyBMNjg2Ljc5MjgsMjI0LjIxNDcgQzY4Ni43OTI4LDIyNS45NjY3IDY4Ni4xNTQ4LDIyNy40Njg3IDY4NC44OTU4LDIyOC43Mzc3IiBpZD0iRmlsbC03Ij48L3BhdGg+ICAgICAgICAgICAgPHBhdGggZD0iTTczOS43NDUxLDE5NS42NDggQzc0NS4wNTIxLDIwMS41MjggNzUyLjI0MTEsMjA0LjQ2MiA3NjEuMjg4MSwyMDQuNDYyIEM3NjkuMjMxMSwyMDQuNDYyIDc3NS44MTcxLDIwMi4xMTggNzgxLjA0OTEsMTk3LjQ0IEM3ODYuMjc5MSwxOTIuNzYyIDc4OS4zMDExLDE4Ni4yMTMgNzkwLjA5NjEsMTc3Ljc5NSBDNzkwLjQwNTEsMTc0LjYyOSA3OTAuNTgxMSwxNzEuNjA3IDc5MC41ODExLDE2OC43NDggQzc5MC41ODExLDE2NS44OTEgNzkwLjQwNTEsMTYyLjg3OCA3OTAuMDk2MSwxNTkuNzAyIEM3ODkuMzAxMSwxNTEuNjEzIDc4Ni4yNDExLDE0NS4xNDIgNzgwLjkzMjEsMTQwLjI5OSBDNzc1LjYwNTEsMTM1LjQ2NSA3NjkuMDU3MSwxMzMuMDQzIDc2MS4yODgxLDEzMy4wNDMgQzc1My4xOTAxLDEzMy4wNDMgNzQ2LjUyNDEsMTM1LjQyNyA3NDEuMjk1MSwxNDAuMTgzIEM3MzYuMDYzMSwxNDQuOTQ4IDczMi45NjQxLDE1Mi4yNDIgNzMyLjAxNDEsMTYyLjA4NCBDNzMxLjg0MDEsMTYzLjY3MiA3MzEuNzYzMSwxNjUuODkxIDczMS43NjMxLDE2OC43NDggQzczMS43NjMxLDE4MC44MTggNzM0LjQxNjEsMTg5Ljc3OCA3MzkuNzQ1MSwxOTUuNjQ4IFogTTc5MC4wOTYxLDY4LjA1NiBDNzkwLjA5NjEsNjYuMzAyIDc5MC43MzYxLDY0LjggNzkxLjk5NTEsNjMuNTMzIEM3OTMuMjcyMSw2Mi4yNjQgNzk0Ljc2NDEsNjEuNjI0IDc5Ni41MjgxLDYxLjYyNCBMODE0LjYyMjEsNjEuNjI0IEM4MTYuMzY1MSw2MS42MjQgODE3Ljg1NzEsNjIuMjY0IDgxOS4xMzcxLDYzLjUzMyBDODIwLjQxNjEsNjQuOCA4MjEuMDM1MSw2Ni4zMDIgODIxLjAzNTEsNjguMDU2IEw4MjEuMDM1MSwyMjQuMjE0IEM4MjEuMDM1MSwyMjUuOTY4IDgyMC40MTYxLDIyNy40NjkgODE5LjEzNzEsMjI4LjczNyBDODE3Ljg1NzEsMjMwLjAxNiA4MTYuMzY1MSwyMzAuNjQ2IDgxNC42MjIxLDIzMC42NDYgTDc5Ni41MjgxLDIzMC42NDYgQzc5NC43NjQxLDIzMC42NDYgNzkzLjI3MjEsMjMwLjAxNiA3OTEuOTk1MSwyMjguNzM3IEM3OTAuNzM2MSwyMjcuNDY5IDc5MC4wOTYxLDIyNS45NjggNzkwLjA5NjEsMjI0LjIxNCBMNzkwLjA5NjEsMjE4Ljc0MSBDNzg2Ljc2NDEsMjIyLjU0OCA3ODIuMTUzMSwyMjUuODggNzc2LjI4MjEsMjI4LjczNyBDNzcwLjQxMjEsMjMxLjU5NCA3NjMuMDMyMSwyMzMuMDI5IDc1NC4xNDAxLDIzMy4wMjkgQzc0My44MzMxLDIzMy4wMjkgNzM0Ljc0NzEsMjMwLjQ1MyA3MjYuODgxMSwyMjUuMjg5IEM3MTkuMDM1MSwyMjAuMTM2IDcxMi44NzQxLDIxMy4zMDcgNzA4LjQzNzEsMjA0LjgyMiBDNzA0LjAwMTEsMTk2LjMyNiA3MDEuNTQwMSwxODcuMDg1IDcwMS4wNTYxLDE3Ny4wNzkgTDcwMC44MjQxLDE2OC43NDggTDcwMS4wNTYxLDE2MC40MTggQzcwMS41NDAxLDE1MC40MjEgNzA0LjAwMTEsMTQxLjE4MSA3MDguNDM3MSwxMzIuNjg2IEM3MTIuODc0MSwxMjQuMTk5IDcxOS4wMzUxLDExNy4zNzEgNzI2Ljg4MTEsMTEyLjIwOCBDNzM0Ljc0NzEsMTA3LjA1NSA3NDMuODMzMSwxMDQuNDc3IDc1NC4xNDAxLDEwNC40NzcgQzc2Mi44NzYxLDEwNC40NzcgNzcwLjE4MDEsMTA1LjkwMSA3NzYuMDUxMSwxMDguNzU5IEM3ODEuOTIwMSwxMTEuNjE3IDc4Ni42MDkxLDExNC45NDkgNzkwLjA5NjEsMTE4Ljc1NiBMNzkwLjA5NjEsNjguMDU2IFoiIGlkPSJGaWxsLTkiPjwvcGF0aD4gICAgICAgICAgICA8cGF0aCBkPSJNMjU2LjE1ODUsMTM2LjkwNzcgTDIwNC43NzY1LDAuMTEwNyBMMTAyLjk4MTUsMTA2LjA3MzcgTDAuODU0NSwyMTIuMzc5NyBMNDguMjM4NSwyMjIuMTY0NyBMOTAuMTI2NSwyMzAuODEzNyBMOTAuMTI1NSwyMzAuODIxNyBMMTIxLjU4NTUsMjM3LjMxNzcgTDEyMS41ODU1LDExMy4yODI3IEMxMjEuNTg1NSwxMTEuNTM5NyAxMjIuMjI0NSwxMTAuMDI4NyAxMjMuNDg0NSwxMDguNzU5NyBDMTI0Ljc2MjUsMTA3LjQ5MDcgMTI2LjI1NDUsMTA2Ljg1MDcgMTI4LjAxNzUsMTA2Ljg1MDcgTDE0Ni4xMTI1LDEwNi44NTA3IEMxNDcuODU2NSwxMDYuODUwNyAxNDkuMzQ3NSwxMDcuNDkwNyAxNTAuNjI1NSwxMDguNzU5NyBDMTUxLjg4NTUsMTEwLjAyODcgMTUyLjUyNDUsMTExLjUzOTcgMTUyLjUyNDUsMTEzLjI4MjcgTDE1Mi41MjQ1LDExOC43NTU3IEMxNTUuODU3NSwxMTQuOTQ4NyAxNjAuNDY3NSwxMTEuNjE2NyAxNjYuMzM3NSwxMDguNzU5NyBDMTcyLjIwNjUsMTA1LjkwMjcgMTc5LjU4ODUsMTA0LjQ3NzcgMTg4LjQ4MTUsMTA0LjQ3NzcgQzE5OC43ODg1LDEwNC40Nzc3IDIwNy44NzM1LDEwNy4wNTQ3IDIxNS43Mzk1LDExMi4yMDc3IEMyMjMuNTg0NSwxMTcuMzcwNyAyMjkuNzQ2NSwxMjQuMTk5NyAyMzQuMTgzNSwxMzIuNjg1NyBDMjM4LjYxOTUsMTQxLjE4MDcgMjQxLjA4MDUsMTUwLjQyMTcgMjQxLjU2NTUsMTYwLjQxNzcgQzI0MS43MTk1LDE2Mi4wMDU3IDI0MS43OTY1LDE2NC43ODY3IDI0MS43OTY1LDE2OC43NDg3IEMyNDEuNzk2NSwxNzIuNzE5NyAyNDEuNzE5NSwxNzUuNTAwNyAyNDEuNTY1NSwxNzcuMDc4NyBDMjQxLjA4MDUsMTg3LjA4NDcgMjM4LjYxOTUsMTk2LjMyNTcgMjM0LjE4MzUsMjA0LjgyMTcgQzIyOS43NDY1LDIxMy4zMDY3IDIyMy41ODQ1LDIyMC4xMzU3IDIxNS43Mzk1LDIyNS4yODg3IEMyMDcuODczNSwyMzAuNDUyNyAxOTguNzg4NSwyMzMuMDI4NyAxODguNDgxNSwyMzMuMDI4NyBDMTc5Ljc0NDUsMjMzLjAyODcgMTcyLjQ0MDUsMjMxLjU5NTcgMTY2LjU3MDUsMjI4LjczODcgQzE2MC43MDA1LDIyNS44Nzk3IDE1Ni4wMTI1LDIyMi41NDc3IDE1Mi41MjQ1LDIxOC43NDE3IEwxNTIuNTI0NSwyNDMuNzA1NyBMMjAyLjMxNjUsMjUzLjk4NzcgTDIwMi4zMTk1LDI1My45Nzg3IEwyNjAuMDA5NSwyNjUuODkxNyBMMzA4LjM1MzUsMjc1Ljg3MjcgTDI1Ni4xNTg1LDEzNi45MDc3IFoiIGlkPSJGaWxsLTExIj48L3BhdGg+ICAgICAgICAgICAgPHBhdGggZD0iTTE2MS42ODcsMTk3LjE5NzcgQzE2Ny4wMTYsMjAyLjA0MTcgMTczLjU2NCwyMDQuNDYzNyAxODEuMzMyLDIwNC40NjM3IEMxODkuNDMsMjA0LjQ2MzcgMTk2LjA5NSwyMDIuMDc5NyAyMDEuMzI2LDE5Ny4zMTM3IEMyMDYuNTc1LDE5Mi41NTc3IDIwOS42NTcsMTg1LjI1NDcgMjEwLjYyNCwxNzUuNDEyNyBDMjEwLjkzNSwxNzIuMjQ0NyAyMTEuMDksMTcwLjAyNjcgMjExLjA5LDE2OC43NDg3IEMyMTEuMDksMTU2LjY4ODcgMjA4LjM5NywxNDcuNzE4NyAyMDIuOTkyLDE0MS44NDg3IEMxOTcuNjA2LDEzNS45Nzc3IDE5MC4zOCwxMzMuMDQyNyAxODEuMzMyLDEzMy4wNDI3IEMxNzMuMzg5LDEzMy4wNDI3IDE2Ni44MjMsMTM1LjM4NjcgMTYxLjU3MiwxNDAuMDY1NyBDMTU2LjM0MSwxNDQuNzQ0NyAxNTMuMzIsMTUxLjI5MzcgMTUyLjUyNCwxNTkuNzAxNyBDMTUyLjM3LDE2MS4yODk3IDE1Mi4yOTEsMTY0LjMxMTcgMTUyLjI5MSwxNjguNzQ4NyBDMTUyLjI5MSwxNzMuMTk0NyAxNTIuMzcsMTc2LjIxNjcgMTUyLjUyNCwxNzcuNzk0NyBDMTUzLjMyLDE4NS44OTM3IDE1Ni4zOCwxOTIuMzUzNyAxNjEuNjg3LDE5Ny4xOTc3IiBpZD0iRmlsbC0xMyI+PC9wYXRoPiAgICAgICAgICAgIDxwYXRoIGQ9Ik0xMjEuNTg1NCwyMzcuMzE4IEwxMjEuNTg1NCwyNjkuNDUxIEMxMjEuNTg1NCwyNzEuMTk0IDEyMi4yMjQ0LDI3Mi43MDUgMTIzLjQ4NDQsMjczLjk3NCBDMTI0Ljc2MTQsMjc1LjI0MyAxMjYuMjUzNCwyNzUuODczIDEyOC4wMTc0LDI3NS44NzMgTDE0Ni4xMTE0LDI3NS44NzMgQzE0Ny44NTU0LDI3NS44NzMgMTQ5LjM0NzQsMjc1LjI0MyAxNTAuNjI2NCwyNzMuOTc0IEMxNTEuODg1NCwyNzIuNzA1IDE1Mi41MjQ0LDI3MS4xOTQgMTUyLjUyNDQsMjY5LjQ1MSBMMTUyLjUyNDQsMjQzLjcwNyBMMTIxLjU4NTQsMjM3LjMxOCBaIiBpZD0iRmlsbC0xNSI+PC9wYXRoPiAgICAgICAgPC9nPiAgICA8L2c+PC9zdmc+);
+}
+
+/* This base64 svg code is long but you know ... I had to display my logotype properly. ;-P
+And isn't it a way more cool to see this funky base64 instead of a boring UTF-8 encoding or the svg <path> syntax? 
+
+      _,.-Y  |  |  Y-._
+  .-~"   ||  |  |  |   "-.
+  I" ""=="|" !""! "|"[]""|     _____
+  L__  [] |..------|:   _[----I" .-{"-.
+ I___|  ..| l______|l_ [__L]_[I_/r(=}=-P
+[L______L_[________]______j~  '-=c_]/=-^
+ \_I_j.--.\==I|I==_/.--L_]
+   [_((==)[`-----"](==)j
+      I--I"~~"""~~"I--I
+      |[]|         |[]|
+      l__j         l__j
+      |!!|         |!!|
+      |..|         |..|
+      ([])         ([])
+      ]--[         ]--[
+      [_L]         [_L]
+     /|..|\       /|..|\
+    `=}--{='     `=}--{='
+   .-^--r-^-.   .-^--r-^-.
+
+Oh wow! Look at this cool AT-AT WALKER (ALL TERRAIN ARMORED TRANSPORT) ... I bet you didn't know the full explanation and ask yourself now why an AT-AT is in the middle of this website, huh? Good question I have also no idea tho. */
+
+body {
+  display: none;
+} 
+
+/* I know the people out there love responsive websites.
+So let's go for those media queries ... sadly I won't support iPad or Android devices.
+Beware tho it's still gonna be a little list and a bit to scroll down until you reach the footer. */
+
+/* Desktop */
+@media screen and (max-width: 900px){
+head style {
+  display: block;
+  padding: 20px 40px;
+  white-space: pre-wrap;
+  letter-spacing: .02em;
+  font: 9px/1.2 'Oxygen Mono', monospace !important;
+}
+
+head::before {
+  content: '- designer & developer';
+  display: block;
+  padding: 26px 120px;
+  font: 24px/1.2 'Rubik', sans-serif !important;
+  border-bottom: 3px solid rgba(194, 251, 0, 1);
+  background-size: 100px !important; 
+}
+}
+
+/* iPhone 6 in landscape */
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 667px) 
+and (orientation : landscape) {
+
+head style {
+  display: block;
+  padding: 20px 40px;
+  white-space: pre-wrap;
+  letter-spacing: .02em;
+  font: 12px/1.2 'Oxygen Mono', monospace !important;
+}
+
+head::before {
+  content: '- designer & developer';
+  display: block;
+  padding: 26px 120px;
+  font: 20px/1.2 'Rubik', sans-serif !important;
+  border-bottom: 3px solid rgba(194, 251, 0, 1);
+  background-size: 100px !important; 
+}
+}
+
+/* iPhone 6 in portrait */
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 667px) 
+and (orientation : portrait) {
+
+head style {
+  display: block;
+  padding: 0px 20px;
+  white-space: pre-wrap;
+  letter-spacing: .02em;
+  font: 7px/1.2 'Oxygen Mono', monospace !important;
+}
+
+head::before {
+  content: '- designer & developer';
+  display: block;
+  padding: 30px 120px;
+  font: 16px/1.2 'Rubik', sans-serif !important;
+  border-bottom: 3px solid rgba(194, 251, 0, 1);
+  background-size: 100px !important; 
+}
+}
+
+/* iPhone 6 Plus in landscape */
+@media only screen 
+and (min-device-width : 414px) 
+and (max-device-width : 736px) 
+and (orientation : landscape) {
+
+head style {
+  display: block;
+  padding: 20px 40px;
+  white-space: pre-wrap;
+  letter-spacing: .02em;
+  font: 12px/1.2 'Oxygen Mono', monospace !important;
+}
+
+head::before {
+  content: '- designer & developer';
+  display: block;
+  padding: 26px 120px;
+  font: 20px/1.2 'Rubik', sans-serif !important;
+  border-bottom: 3px solid rgba(194, 251, 0, 1);
+  background-size: 100px !important; 
+}
+}
+
+/* iPhone 6 Plus in portrait */
+@media only screen 
+and (min-device-width : 414px) 
+and (max-device-width : 736px) 
+and (orientation : portrait) {
+
+head style {
+  display: block;
+  padding: 0px 20px;
+  white-space: pre-wrap;
+  letter-spacing: .02em;
+  font: 7px/1.2 'Oxygen Mono', monospace !important;
+}
+
+head::before {
+  content: '- designer & developer';
+  display: block;
+  padding: 30px 120px;
+  font: 16px/1.2 'Rubik', sans-serif !important;
+  border-bottom: 3px solid rgba(194, 251, 0, 1);
+  background-size: 100px !important; 
+} 
+}
+
+/* iPhone 5 & 5S in landscape */
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 568px) 
+and (orientation : landscape) {
+
+head style {
+  display: block;
+  padding: 20px 40px;
+  white-space: pre-wrap;
+  letter-spacing: .02em;
+  font: 21px/1.2 'Oxygen Mono', monospace !important;
+}
+
+head::before {
+  content: '- designer & developer';
+  display: block;
+  padding: 26px 120px;
+  font: 20px/1.2 'Rubik', sans-serif !important;
+  border-bottom: 3px solid rgba(194, 251, 0, 1);
+  background-size: 100px !important; 
+} 
+}
+
+/* iPhone 5 & 5S in portrait */
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 568px) 
+and (orientation : portrait) {
+
+head style {
+  display: block;
+  padding: 0px 20px;
+  white-space: pre-wrap;
+  letter-spacing: .02em;
+  font: 6.4px/1.2 'Oxygen Mono', monospace !important;
+}
+
+head::before {
+  content: '- designer & developer';
+  display: block;
+  padding: 30px 120px;
+  font: 16px/1.2 'Rubik', sans-serif !important;
+  border-bottom: 3px solid rgba(194, 251, 0, 1);
+  background-size: 100px !important; 
+} 
+}
+
+/* iPhone 2G, 3G, 4, 4S Media Queries.
+It's noteworthy that these media queries are also the same for iPod Touch generations 1-4. */
+
+/* iPhone 2G-4S in landscape */
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) 
+and (orientation : landscape) {
+
+head style {
+  display: block;
+  padding: 20px 40px;
+  white-space: pre-wrap;
+  letter-spacing: .02em;
+  font: 9px/1.2 'Oxygen Mono', monospace !important;
+}
+
+head::before {
+  content: '- designer & developer';
+  display: block;
+  padding: 26px 120px;
+  font: 20px/1.2 'Rubik', sans-serif !important;
+  border-bottom: 3px solid rgba(194, 251, 0, 1);
+  background-size: 100px !important; 
+}
+}
+
+/* iPhone 2G-4S in portrait */
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) 
+and (orientation : portrait) {
+
+head style {
+  display: block;
+  padding: 0px 20px;
+  white-space: pre-wrap;
+  letter-spacing: .02em;
+  font: 6px/1.2 'Oxygen Mono', monospace !important;
+}
+
+head::before {
+  content: '- designer & developer';
+  display: block;
+  padding: 30px 120px;
+  font: 16px/1.2 'Rubik', sans-serif !important;
+  border-bottom: 3px solid rgba(194, 251, 0, 1);
+  background-size: 100px !important; 
+}   
+}
+ 
+/* Damn those media queries are pretty space-wasting and boring aswell.
+I am aware of the "reload/refresh" issue when you edit stuff and I am about to fix that soon.
+By the way - Congratulations that you made it that far. You did it! :-P
+
+Since this part is the actual footer of the website, let's display some infos:
+
+      ___           ___                       ___       ___     
+     /\  \         /\__\          ___        /\__\     /\  \    
+    /::\  \       /:/  /         /\  \      /:/  /    /::\  \   
+   /:/\:\  \     /:/__/          \:\  \    /:/  /    /:/\:\  \  
+  /::\~\:\  \   /::\  \ ___      /::\__\  /:/  /    /:/  \:\__\ 
+ /:/\:\ \:\__\ /:/\:\  /\__\  __/:/\/__/ /:/__/    /:/__/ \:|__|
+ \/__\:\/:/  / \/__\:\/:/  / /\/:/  /    \:\  \    \:\  \ /:/  /
+      \::/  /       \::/  /  \::/__/      \:\  \    \:\  /:/  / 
+       \/__/        /:/  /    \:\__\       \:\  \    \:\/:/  /  
+                   /:/  /      \/__/        \:\__\    \::/__/   
+                   \/__/                     \/__/     ~~       
+
+----------------------------------------------------------------
+Made with Wrigley's 5 Gum Sweet Mint & CSS only / copyright 2019
+Twitter: https://twitter.com/iam_phild
+Dribbble: https://dribbble.com/phild
+
+(See you around somewhere() != EOF) */
+
+</style>
+
+
+</head>
+
+<body></body>
+
+</html>
